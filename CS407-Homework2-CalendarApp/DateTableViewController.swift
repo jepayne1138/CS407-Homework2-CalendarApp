@@ -13,9 +13,18 @@ class DateTableViewController: UITableViewController, eventDelegate {
     var currentEvents: [Event] = []
     var currentDate: NSDate?
     
+    func printCalendar() {
+        for (curDate, events) in calendar {
+            print("Date: \(curDate)")
+            for (_, v) in events {
+                print(v)
+            }
+        }
+    }
+    
     // MARK: Delegate functions
     func createEvent(event: Event, new: Bool) {
-        if calendar[currentDate!] == nil {calendar[currentDate!] = [:]}
+        if (calendar[currentDate!] == nil) {calendar[currentDate!] = [:]}
         if (new) {
             calendar[currentDate!]![event.name] = event
         }
@@ -26,7 +35,8 @@ class DateTableViewController: UITableViewController, eventDelegate {
     }
     
     func resetCurrentEvents() {
-        if ((calendar[currentDate!]) != nil) {
+//        printCalendar()
+        if (calendar[currentDate!] != nil) {
             currentEvents = calendar[currentDate!]!.values.sort(byStart)
         }
         else {

@@ -31,7 +31,10 @@ class CalendarViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         let destView = segue.destinationViewController as? DateTableViewController
-        destView?.currentDate = currentDatePicker.date
+        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let date = cal.startOfDayForDate(currentDatePicker.date)
+        
+        destView?.currentDate = date
     }
 
 }
