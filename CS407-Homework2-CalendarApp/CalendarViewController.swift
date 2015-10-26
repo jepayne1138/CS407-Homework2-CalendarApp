@@ -10,6 +10,8 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
+    @IBOutlet weak var currentDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +23,15 @@ class CalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let destView = segue.destinationViewController as? DateTableViewController
+        destView?.currentDate = currentDatePicker.date
     }
-    */
 
 }

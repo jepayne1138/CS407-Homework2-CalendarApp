@@ -9,8 +9,14 @@
 import Foundation
 
 struct Event {
-    var name: String
-    var start: NSDate
-    var end: NSDate
-    var description: String
+    var name = ""
+    var start = NSDate()
+    var end = NSDate()
+    var description = ""
+}
+
+var calendar: [NSDate: [String: Event]] = [:]
+
+protocol eventDelegate {
+    func createEvent(event: Event, new: Bool)
 }

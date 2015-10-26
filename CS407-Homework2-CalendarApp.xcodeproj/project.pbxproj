@@ -70,8 +70,8 @@
 				384E78361BCC2371004D391C /* Info.plist */,
 				38BC25D21BDD4A8B0047287D /* CalendarViewController.swift */,
 				38BC25D41BDD4AAC0047287D /* DateTableViewController.swift */,
-				38BC25D61BDD4ACF0047287D /* EventViewController.swift */,
 				38BC25D81BDD4AE10047287D /* EventTableViewCell.swift */,
+				38BC25D61BDD4ACF0047287D /* EventViewController.swift */,
 			);
 			path = "CS407-Homework2-CalendarApp";
 			sourceTree = "<group>";
